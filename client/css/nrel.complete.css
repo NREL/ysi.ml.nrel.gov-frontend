@@ -1,4 +1,4 @@
-/* Bootstrap 4 update 01-2019 */
+/* Bootstrap 4 update 03-2019 */
 
 /*
  *  GENERAL TYPOGRAPHY
@@ -6,7 +6,7 @@
 body {
     background-color: transparent;
 	color: #333;
-    font-family: "Droid Serif", "Noto Serif", serif;
+    font-family: "Noto Serif", serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.65;
@@ -419,7 +419,7 @@ h6 a:hover {
 
 .big-quote::before {
     color: #ccc;
-    font-family: "Droid Serif", "Noto Serif", serif;
+    font-family: "Noto Serif", serif;
     font-size: 3em;
     line-height: 0;
     vertical-align: text-bottom;
@@ -745,7 +745,7 @@ h6 .fa,
 }
 
 /* change staff table to droid */
-div#staff_wrapper {font-family: "Droid Serif", "Noto Serif", serif;}
+div#staff_wrapper {font-family: "Noto Serif", serif;}
 
 /* remove bullet and left align lower level rows on mobile */
 table#staff td {
@@ -1414,7 +1414,7 @@ a.singleLightbox:hover {
 }
 
 .call-to-action {
-    font-family: "Droid Serif", "Noto Serif", serif;
+    font-family: "Noto Serif", serif;
     font-weight: 300;
 }
 .call-to-action .lead {
@@ -2609,7 +2609,7 @@ ul.dropdown-menu {
     min-height:60px;
 }
 header .logo {
-	background:  url("../img/nrel-logo@2x-01.png") no-repeat center;
+	background:  url("https://www.nrel.gov/_resources/images/nrel-logo@2x-01.png") no-repeat center;
 	height: 75px;
 	background-size: 160px;
 	margin: 0 0 10px 0;
@@ -2628,7 +2628,7 @@ header .logo {
 
 @media (min-width: 768px) {
     header .logo {
-		background: url("../img/nrel-logo@2x-01.png") no-repeat left;
+		background: url("https://www.nrel.gov/_resources/images/nrel-logo@2x-01.png") no-repeat left;
 		height:130px;
 		background-size: 277px;
     }
