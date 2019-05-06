@@ -109,7 +109,7 @@ h2 > a:visited  {
     }
 }
 
-.ðŸ {
+.ðŸ {
     color: yellow;
     font-size: 30px;
     font-weight: bold;
@@ -777,9 +777,7 @@ table#staff td.child ul li {
     text-decoration: none;
 }
 @media(min-width:768px){
-    .feature {
-        margin-bottom:12px;
-    }
+    .feature {margin-bottom:12px;}
 }
 /* when we have 1 column, only the very last column gets the border removed */
 .row .col-sm-6:last-child .feature.last {
