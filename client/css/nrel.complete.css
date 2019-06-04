@@ -1,4 +1,4 @@
-/* Bootstrap 4 update 03-2019 */
+/* Bootstrap 4 : 06-03-2019 */
 
 /*
  *  GENERAL TYPOGRAPHY
@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
 
     /* These are technically the same, but use both */
     word-wrap: break-word;
@@ -81,7 +81,7 @@ h4 {
 }
 
 .lead {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
 
@@ -109,7 +109,7 @@ h2 > a:visited  {
     }
 }
 
-.ðŸ {
+.ðŸ {
     color: yellow;
     font-size: 30px;
     font-weight: bold;
@@ -235,6 +235,7 @@ a.fa:hover {
     font-family: Roboto, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 400;
     line-height: 1.3;
+	width:100%;
 }
 
 .sidenav a,
@@ -247,7 +248,7 @@ a.fa:hover {
     background-color: transparent; /* override */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	.sidenav {
 		margin: 0.6em 0;
 	}
@@ -447,6 +448,12 @@ h6 .fa,
     font-size: 80%;
     vertical-align:middle;
 }
+.headerlink:after {
+	font-family: FontAwesome;
+	content: "\00a0\f138";
+	display: inline;
+	font-size: 0.85em;
+}
 
 /*
  *  MORE
@@ -498,7 +505,7 @@ h6 .fa,
 }
 
 /*
- *  Accordions
+ *  Accordions - BS3
  ********************/
 .panel {
     -webkit-box-shadow: none;
@@ -506,14 +513,18 @@ h6 .fa,
 }
 
 .panel-default {
-    border-color: #127BBF;
+    border: 1px solid #127BBF;
 }
 
 .panel-group .panel-heading > .panel-title {
     font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
-
+.panel-body {
+    padding: 15px;
+}
+.collapse.in {
+    display: block;
+}
 .panel-heading > .panel-title > .accordion-toggle {
     margin-left:0px;
     padding-left:40px;
@@ -565,7 +576,7 @@ h6 .fa,
     padding: 0;
     cursor: pointer;
 }
-
+.panel-heading h4 {margin: 0;}
 
 .panel-default > .panel-heading {
     background-color: transparent;
@@ -744,8 +755,17 @@ h6 .fa,
   font-size: small;
 }
 
-/* change staff table to droid */
-div#staff_wrapper {font-family: "Noto Serif", serif;}
+/* staff listing tables */
+div#staff_wrapper {
+	font-family: "Noto Serif", serif;
+}
+#staff_wrapper input {
+	margin-bottom:0.5em;
+}
+#staff .bg-blue {
+    color: #fff;
+    background-color: #428bca;
+}
 
 /* remove bullet and left align lower level rows on mobile */
 table#staff td {
@@ -777,7 +797,9 @@ table#staff td.child ul li {
     text-decoration: none;
 }
 @media(min-width:768px){
-    .feature {margin-bottom:12px;}
+    .feature {
+        margin-bottom:12px;
+    }
 }
 /* when we have 1 column, only the very last column gets the border removed */
 .row .col-sm-6:last-child .feature.last {
@@ -1085,6 +1107,25 @@ a.btn-default {
   box-shadow: inset 0px 2px 2px 0px rgba(50, 50, 50, 0.4);
 }
 
+/* buttons with 2 lines of text */
+.btn-long {
+	font-size:18px;
+	height: 38px;
+	line-height: 1.3em;
+	white-space: normal;
+}
+@media only screen and (min-width : 992px) {
+	.btn-long {
+	height: 80px;
+	}
+}
+@media only screen and (min-width : 1200px) {
+	.btn-long {
+		height: 60px;
+	}
+}	
+
+
 /*
  *  INPUTS
  *********************************************/
@@ -1363,6 +1404,7 @@ a[data-toggle=lightbox] {
 	border:1px solid #666;
 }
 
+
 /* old lightbox */
 a.singleLightbox {
     text-decoration: none;
@@ -1393,7 +1435,7 @@ a.singleLightbox:hover {
 }
 @media (min-width: 768px) {
     .icon-circle   {
-        margin: 0;
+        margin: auto;
     }
 }
 
@@ -1470,7 +1512,9 @@ a.singleLightbox:hover {
     box-shadow: none;
 	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
-
+.pull-right {
+    float: right;
+}
 /*
  *  WELLS
  *********************************************/
@@ -1583,14 +1627,9 @@ a.singleLightbox:hover {
     text-align: left;
     left: 0;
     right:0;
-
-
-
-
     bottom:0;
     width: 100%;
     position: relative;
-
 }
 @media (min-width:768px) {
     .caption-box {
@@ -1622,13 +1661,16 @@ a.singleLightbox:hover {
   color: inherit;
   line-height: inherit;
 }
+
 /*
  *  Icons
  */
 .fileIcon {
    margin-left: 5px;
 }
-
+.lg-icon {width:6.5rem;}
+.fs-icon, .md-icon {width:4.5rem;}
+.sm-icon {width:3.5rem;}
 .v-center .row {
     display: table;
     margin: 0;
@@ -1656,11 +1698,11 @@ a.singleLightbox:hover {
 /* image border */
 .img-border{border: 1px solid #bebebe;}
 
-/* IE fix for scaling svgs properly */
+/* IE fix for scaling svgs properly
 img[src$=".svg"].img-fluid {
     width: 100%;
 }
-
+ */
 /* A little space between the icon and text, but without any underline in a hyperlink */
 a > .fa:first-child {
     margin-right: 5px;
@@ -2079,6 +2121,7 @@ caption {
 	text-align:left;
 	border-bottom: 3px solid #5dd2ff;
 	color: #004677;
+	caption-side: top;
 }
 table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::before, table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child::before {
 	background-color:#0079c2 !important;
@@ -2108,7 +2151,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::
 
 .navbar {
 	padding:0;
-	font-family: "Roboto";
+	font-family: "Roboto", sans-serif;
 }
 
 .dropdown-toggle::after {
@@ -2120,6 +2163,20 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::
 		display: none;
 	}
 }
+/* S&T program top nav */
+.program-header .navbar .navbar-collapse {border: none;}
+@media (min-width: 768px) {
+	.program-header .navbar .navbar-collapse {border-top: 1px solid #d1d5d8;}
+}
+@media (min-width: 992px) {
+	.program-header .navbar .navbar-collapse {border:none;}
+	.program-header .navbar .navbar-collapse.xl-row {border-top: 1px solid #d1d5d8;}
+	.program-header .navbar .navbar-collapse.rows {border-top: 1px solid #d1d5d8;}
+}
+@media (min-width: 1200px) {
+	.program-header .navbar .navbar-collapse.xl-row {border-top:none}
+}
+/* App template top nav */
 .application .navbar-light .navbar-nav .dropdown-menu,
 .program-header .navbar-light .navbar-nav .dropdown-menu {
 	left:auto;
@@ -2162,7 +2219,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 .navbar-wrapper {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;;
     min-height: 50px;
 	} 
 
@@ -2504,10 +2561,13 @@ ul.dropdown-menu {
     background-color:#0079c2;
 	color: #fff;
 }
+.navbar-light .navbar-nav.ml-auto .nav-link {
+	color: #0a87d3;
+}
 .navbar-light .navbar-nav .nav-link {
 	color: #5e6a71;
 	background-color: #ededed;
-	padding: 0 15px;
+	padding: 15px;
 }
 .navbar-light .navbar-nav .active > .nav-link, 
 .navbar-light .navbar-nav .nav-link.active, 
@@ -2649,7 +2709,7 @@ header .logo {
  *  SEARCH
  ************************************************************/
 .searchbar-toggle {
-    border: 1px solid #5e6a71 ;
+	border: 1px solid #5e6a71 ;
     border-radius:5px;
     color: #5e6a71 ;
     margin:15px;
@@ -3030,7 +3090,6 @@ figcaption {
 
 .content-list-widget .list {
     padding-left: 1.35em;
-    min-height: 170px;
 }
 
 .content-list-widget .title+.list {
