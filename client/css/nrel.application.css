@@ -77,13 +77,26 @@ header .logo.interior {
 	padding-bottom: 7px;
 	background-color: transparent;
 }
-.site-searchbar-form .btn {margin-left:-25px;}
+.site-searchbar-form .form-control {
+    display: inline-block;
+    width: 200px;
+    vertical-align: middle;
+    box-shadow: none;
+    height: 43px;
+}
+@media (max-width: 350px) {
+    .site-searchbar-form .form-control {
+        width: 160px;
+    }
+}
 .site-searchbar-form .form-group {margin-bottom:0;}
 #searchbar-collapse-mobile button {
 	background-color: #D1D5D8;
 	border-color: #D1D5D8;
 	color: #000;
 }
+
+
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {  
 	.site-searchbar-toggle {
