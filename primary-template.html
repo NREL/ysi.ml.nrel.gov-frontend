@@ -18,13 +18,13 @@
 		<meta http-equiv="last-modified" content="<!--#echo var='LAST_MODIFIED'-->">
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
 		<!-- iOS icons -->
 		<link rel="apple-touch-icon" href="/client/img/touch-icon-iphone.png">
-		<link rel="apple-touch-icon" sizes="72x72"   href="client/img/touch-icon-ipad.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="client/img/touch-icon-iphone-retina.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="client/img/touch-icon-ipad-retina.png">
+		<link rel="apple-touch-icon" sizes="72x72"   href="/client/img/touch-icon-ipad.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/client/img/touch-icon-iphone-retina.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/client/img/touch-icon-ipad-retina.png">
 
 		<!-- GLOBAL styles -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -34,10 +34,11 @@
 		<link href="client/css/nrel.application.min.css" rel="stylesheet" type="text/css" >
 
 		<!-- Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i%7CRoboto:300,400,700" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
 
 		<!-- Font Awesome -->
-		<script async src="//use.fontawesome.com/83c5c68c25.js"></script>
+		<script src="https://kit.fontawesome.com/36ddb5b453.js" crossorigin="anonymous"></script>
 
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
@@ -101,7 +102,7 @@
 						</div>
 
 						<div class="col-md-6 col-xl-8 order-md-1">
-							<a href="{{d:1}}" class="app-name">Application Name</a>
+							<a href="/" class="app-name">Application Name</a>
 						</div>
 
 					</div>
@@ -149,8 +150,8 @@
 					</div>
 
 				</nav>
-			</div><!--program-header-->
-		</div><!--container-->
+			</div><!--container-->
+		</div><!--program-header-->
 		<!-- mobile search button -->
 		<button type="button" class="custom-toggler site-navbar-toggler site-searchbar-toggle d-md-none" data-toggle="collapse" data-target="#searchbar-collapse-mobile" aria-expanded="false" aria-label="Toggle Search">
 			<span class="fa fa-search" aria-hidden="true"></span>
@@ -313,7 +314,7 @@
 	                        <ul>
 	                            <li><a href="https://www.nrel.gov/careers/">Apply for a Job</a></li>
 	                            <li><a href="https://developer.nrel.gov/">Developers</a></li>
-	                            <li><a href="https://images.nrel.gov/bp/#/">Image Gallery</a></li>
+	                            <li><a href="https://images.nrel.gov/">Image Gallery</a></li>
 	                        </ul>
 	                    </div>
 	                </div>
