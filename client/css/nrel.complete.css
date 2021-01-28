@@ -417,7 +417,7 @@ content: "\f055";
 #accordion .card-header .btn[aria-expanded="true"] {
 	background-color: #0079C2;
 	color: #fff;
-	background-image: url(/"../img/icon_minus.svg");
+	background-image: url("../img/icon_minus.svg");
 	background-repeat: no-repeat;
 	background-position: 1% center;
 	background-size: 25px 25px;
@@ -428,7 +428,7 @@ content: "\f055";
 #accordion .card-header .btn[aria-expanded="false"] {
 	background-color: #fff;
 	color: #0079C2;
-	background-image: url(/"../img/icon_plus_blue.svg");
+	background-image: url("../img/icon_plus_blue.svg");
 	background-repeat: no-repeat;
 	background-position: 1% center;
 	background-size: 25px 25px;
