@@ -73,7 +73,7 @@ h6 a[href]::after {
 }
 a[href]::after {
     font-family: FontAwesome;
-    font-size: 1em;
+    font-size: 0.85em;
 }
  
 h1 a[href$=".pdf"]::after,
@@ -879,17 +879,23 @@ h4.panel-title a[href]::after {content:"";}
 	}
 }
 .bio {
-	border-bottom: 1px solid #eee;
 	padding-bottom: 2em;
 }
 .bio:last-child {
 	border-bottom: none;
 }
-.bio .header-description {
+.bio h3.header-description, .bio h4.header-description, .bio p.header-description {
 	font-size: 1rem;
+	color:#757575;
+    font-weight:400;
+    margin: 0 0 0.25em 0;
 }
-.bio h3.header-description, .bio h4.header-description {
-	font-size: 1rem;
+.bio p.header {font-size:1.3em;font-weight:300;line-height: 1.2;margin:0 0 0.25em 0;}
+.bio p.header a[href]::after {
+    font-family: FontAwesome;
+    content: "\00a0\f054";
+    display: inline;
+    font-size: 0.65em;
 }
 #staff_wrapper input {
 	margin-bottom:0.5em;
@@ -2245,7 +2251,7 @@ ul.dropdown-menu {
 	min-height:60px;
 }
 header .logo {
-	background: url("client/img/nrel-logo-web.svg") no-repeat center;
+	background: url("../img/nrel-logo-web.svg") no-repeat center;
 	height: 75px;
 	background-size: 160px;
 	margin: 0 0 10px 0;
@@ -2260,6 +2266,7 @@ header .logo {
 	padding-right: 0;
 	padding-left: 0;
 }
+header.notopnav {border-bottom: 1px solid #d1d5d8; margin:0 0 1.5em 0;}
 @media only screen and (min-width : 480px) {
 	header .logo {
 		height: 85px;
@@ -2270,7 +2277,7 @@ header .logo {
 @media (min-width: 768px) {
 	header .logo {
 		/* background: url("{{f:75212}}") no-repeat left; */
-		background: url("client/img/nrel-logo-web.svg") no-repeat left;
+		background: url("../img/nrel-logo-web.svg") no-repeat left;
 		height:130px;
 		background-size: 277px;
 	}
@@ -2606,3 +2613,5 @@ figcaption {
 }
 .blogpost h2 {margin:0.5em 0;}
 .addthis_inline_share_toolbox_hq4v {margin-left:-10px;}
+blockquote {color: #757575; border-top: 5px solid #00A4E4; border-bottom: 5px solid #00A4E4; padding: 1em 0;}
+blockquote.green {color: #757575; border-top: 5px solid #8cc63f; border-bottom: 5px solid #8cc63f; padding: 1em 0;}
