@@ -12,3 +12,4 @@ Simply run `npm install nrel-branding` and follow the instruction in the readme 
 [NPM package](https://www.npmjs.com/package/nrel-branding)
 
 [GitHub Repo](https://github.com/NREL/NREL-Branding-React-NPM-Package)
+ 
