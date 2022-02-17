@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Application Title</title>
+		<title>YSI Estimator</title>
 
 		<!-- == APPLICATION HEAD == -->
 		<!-- Google Tag Manager -->
@@ -45,6 +45,27 @@
 		</script>
 
 		<!-- == END APPLICATION HEAD == -->
+			<!-- Site application scripts -->
+			<script src="client/js/plugins.min.js"></script>
+			<!-- == END GLOBAL APPLICATION SCRIPTS == -->
+			<!-- Vue -->
+			<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"
+				integrity="sha384-ULpZhk1pvhc/UK5ktA9kwb2guy9ovNSTyxPNHANnA35YjBQgdwI+AhLkixDvdlw4"
+				crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/vue-router@3.5.3/dist/vue-router.min.js"
+				integrity="sha256-0PgcgcWr5yHn20NMCKGdTTIyKUS8xShA2pBvp5Ev5TI=" crossorigin="anonymous"></script>
+			<!-- Axios -->
+			<script src="https://cdn.jsdelivr.net/npm/axios@0.25.0/dist/axios.min.js"
+				integrity="sha256-sAgoqllJaAcfBihBgzVT+YVBhFBh4tHDFE2keszllA0=" crossorigin="anonymous"></script>
+			<!-- jsme script -->
+			<script type="text/javascript" language="javascript" src="js/jsme.nocache.js"></script>
+			<!-- Custom components -->
+			<script type="text/javascript" language="javascript" src="js/components/home.js"></script>
+			<script type="text/javascript" language="javascript" src="js/components/frag.js"></script>
+			<script type="text/javascript" language="javascript" src="js/components/result.js"></script>
+			<script type="text/javascript" language="javascript" src="js/components/smiles.js"></script>
+			<link rel="stylesheet" media="print" href="css/print.css">
+			<link href="css/custom.css" rel="stylesheet">
 	</head>
 	<body>
 		<!-- Google Tag Manager (noscript) -->
@@ -102,7 +123,7 @@
 						</div>
 
 						<div class="col-md-6 col-xl-8 order-md-1">
-							<a href="/" class="app-name">Application Name</a>
+							<a href="/" class="app-name">YSI Estimator</a>
 						</div>
 
 					</div>
@@ -219,6 +240,14 @@
 				</div>
 				<!--startindex-->
 			</div>
+		</div>
+		<div id="content">
+			<div id="app">
+				<smiles></smiles>
+				<router-view></router-view>
+			</div>
+			<!-- Vue controller -->
+			<script type="text/javascript" language="javascript" src="js/app.js"></script>
 		</div>
 
 		<!-- == APPLICATION FOOTER | updated 3/2021 == -->
