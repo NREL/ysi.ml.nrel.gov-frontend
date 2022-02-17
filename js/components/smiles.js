@@ -5,7 +5,7 @@ const smiles = Vue.component('smiles', {
   <form @submit.prevent="submit">
       <div class="form-group" id="smiles-input">
           <input type="text" v-model="name" class="form-control" id="name" placeholder="Enter a SMILES string, e.g. 'CC1=CC(=CC(=C1)O)C'">
-          <a class="btn btn-success" data-toggle="modal" data-target="#jsmewindow" @click="drawfromSmiles()"><span class="glyphicon glyphicon-pencil" style="margin-right:10px"></span>Draw</a>
+          <a class="btn btn-success text-nowrap" data-toggle="modal" data-target="#jsmewindow" @click="drawfromSmiles()"><i class="fa fa-solid fa-pen"></i>Draw</a>
           <button type="submit" class="btn btn-success">
               Submit
           </button>
