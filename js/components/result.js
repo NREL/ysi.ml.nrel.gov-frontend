@@ -1,5 +1,5 @@
 const result = Vue.component('result', {
-  props: ['smiles', 'api_error'],
+  props: ['smiles'],
   template: `
 <div class='container'>
   <div class="alert alert-warning" v-if="api_error">{{api_error}}</div>
@@ -31,7 +31,7 @@ const result = Vue.component('result', {
       <div v-if="frag_missing_df.count" class='container'>
         <div id='frags' class="row">
         	<div v-for="key in Object.keys(frag_missing_df.count)" class="col-sm-6 col-md-6 media fragment border-1 rounded">
-        		<div class='media-left' v-html="frag_missing_df.svg[key]"></div>
+        		<div v-if="frag_missing_df.svg" class='media-left' v-html="frag_missing_df.svg[key]"></div>
         		<div class="media-body">
         			<h4 class='media-heading'>{{ key }}</h4>
         			<p><strong>Count:</strong> {{ frag_missing_df.count[key] }}<br/>
@@ -46,7 +46,7 @@ const result = Vue.component('result', {
     <div v-if="frag_df.count" class='container'>
       <div id='frags' class="row">
       	<div v-for="key in Object.keys(frag_df.count)" class="col-sm-6 col-md-6 media fragment border-1 rounded">
-      		<div class='media-left' v-html="frag_df.svg[key]"></div>
+      		<div v-if="frag_df.svg" class='media-left' v-html="frag_df.svg[key]"></div>
       		<div class="media-body">
       			<h4 class='media-heading'>{{ key }}</h4>
       			<p><strong>Count:</strong> {{ frag_df.count[key]}}<br/>
@@ -74,14 +74,14 @@ const result = Vue.component('result', {
       std: null,
       frag_missing_df: {},
       frag_df: {},
-      outlier: false
+      outlier: false,
+      api_error: ""
       };
   },
   methods: {
     async get_data(){
       axios.get(api_server + '/result/' +  encodeURIComponent(this.$route.params.smiles))
       .then(response => {
-          // console.log(response);
           Object.assign(this, response.data);
           this.api_error = "";
       })
