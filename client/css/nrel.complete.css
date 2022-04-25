@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/* CSS Document */
+
 body, html {overflow-x:hidden;}
 body {
 	background-color: transparent;
@@ -8,30 +11,38 @@ body {
 	padding: 0;
 }
 h1 {
+	color:#222;
 	font-weight: 300;
 	font-size: 2em;
 	margin-top: 0;
 }
-h2 {
-	font-weight: 300;
-	font-size: 1.75em;
-	color: #e07700;
-}
 @media (min-width: 768px) {
 	h1 {font-size: 2.15em;}	
 }
+h2 {
+	color: #e07700;
+	font-weight: 300;
+	font-size: 1.75em;
+}
 h3 {
+	color:#222;
 	font-weight: 400;
 	font-size: 1.5em;
 }
 h4 {
-	font-size: 1.3em;
-	color: #e07700;
-	font-weight: 300;
+	color: #222;
+	font-size: 1.375em;
+	font-weight: 400;
 }
 h5 {
-	font-weight: 500;
-	font-size: 1.2em;
+	color:#222;
+	font-weight: 400;
+	font-size: 1.25em;
+}
+h6 {
+	color:#222;
+	font-weight: 400;
+	font-size: 1.125em;
 }
 a {
 	color: #0079C2;
@@ -87,35 +98,35 @@ a[href$=".pdf"]::after {
 	display: inline;
 }
  
-h1 a[href*=".doc"]::after,
-h2 a[href*=".doc"]::after,
-h3 a[href*=".doc"]::after,
-h4 a[href*=".doc"]::after,
-h5 a[href*=".doc"]::after,
-h6 a[href*=".doc"]::after,
-a[href*=".doc"]::after {
+h1 a[href$=".doc"]::after,
+h2 a[href$=".doc"]::after,
+h3 a[href$=".doc"]::after,
+h4 a[href$=".doc"]::after,
+h5 a[href$=".doc"]::after,
+h6 a[href$=".doc"]::after,
+a[href$=".doc"]::after {
     content: "\00a0\f1c2";
 	display: inline;
 }                             
  
-h1 a[href*=".xls"]::after,
-h2 a[href*=".xls"]::after,
-h3 a[href*=".xls"]::after,
-h4 a[href*=".xls"]::after,
-h5 a[href*=".xls"]::after,
-h6 a[href*=".xls"]::after,
-a[href*=".xls"]::after{
+h1 a[href$=".xls"]::after,
+h2 a[href$=".xls"]::after,
+h3 a[href$=".xls"]::after,
+h4 a[href$=".xls"]::after,
+h5 a[href$=".xls"]::after,
+h6 a[href$=".xls"]::after,
+a[href$=".xls"]::after{
     content: "\00a0\f1c3";
 	display: inline;
 }             
  
-h1 a[href*=".ppt"]::after,
-h2 a[href*=".ppt"]::after,
-h3 a[href*=".ppt"]::after,
-h4 a[href*=".ppt"]::after,
-h5 a[href*=".ppt"]::after,
-h6 a[href*=".ppt"]::after,
-a[href*=".ppt"]::after {
+h1 a[href$=".ppt"]::after,
+h2 a[href$=".ppt"]::after,
+h3 a[href$=".ppt"]::after,
+h4 a[href$=".ppt"]::after,
+h5 a[href$=".ppt"]::after,
+h6 a[href$=".ppt"]::after,
+a[href$=".ppt"]::after {
     content: "\00a0\f1c4";
 	display: inline;
 }
@@ -177,9 +188,9 @@ a[href$=".zip"]::after {
 } 
 img a[href]::after,
 img a[href$=".pdf"]::after,
-img a[href*=".doc"]::after,
-img a[href*=".xls"]::after,
-img a[href*=".ppt"]::after,
+img a[href$=".doc"]::after,
+img a[href$=".xls"]::after,
+img a[href$=".ppt"]::after,
 img a[href$=".jpg"]::after,
 img a[href$=".png"]::after,
 img a[href$=".gif"]::after,
@@ -522,18 +533,21 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 /* CARDS/ACCORDIONS */
 
-#accordion .card, .accordion .card {
+#accordion .card, .accordion .card,
+[id^="accordion_"]  .card, .accordion .card {
 	border: 1px solid #0079C2;
 	border-radius: 0;
 	margin: -1px -1px 0.5rem -1px;
 }
-#accordion .card-header, .accordion .card-header {
+#accordion .card-header, .accordion .card-header,
+[id^="accordion_"] .card-header, .accordion .card-header {
 	padding: 0;
 	margin: 0;
 	border-radius: 0;
 	border-bottom: none;
 } 
-#accordion .card-header .btn, .accordion .card-header .btn {
+#accordion .card-header .btn, .accordion .card-header .btn, 
+[id^="accordion_"] .card-header .btn, .accordion .card-header .btn {
 	text-transform: none;
 	font-size: 1.3rem;
 	font-weight: 300;
@@ -544,8 +558,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	padding: 0.65rem 0.65rem 0.65rem 40px;
 }
 #accordion .card-header .btn-link:hover,
+[id^="accordion_"] .card-header .btn-link:hover,
 #accordion .card-header .btn-link:active,
+[id^="accordion_"] .card-header .btn-link:active,
 #accordion .card-header .btn-link:focus,
+[id^="accordion_"] .card-header .btn-link:focus,
 .accordion .card-header .btn-link:hover,
 .accordion .card-header .btn-link:active,
 .accordion .card-header .btn-link:focus {
@@ -559,6 +576,7 @@ content: "\f056";
 content: "\f055";
 } */
 #accordion .card-header .btn[aria-expanded="true"],
+[id^="accordion_"] .card-header .btn[aria-expanded="true"],
 .accordion .card-header .btn[aria-expanded="true"] {
 	background-color: #0079C2;
 	color: #fff;
@@ -571,6 +589,7 @@ content: "\f055";
 	display: block;
 }
 #accordion .card-header .btn[aria-expanded="false"],
+[id^="accordion_"] .card-header .btn[aria-expanded="false"],
 .accordion .card-header .btn[aria-expanded="false"] {
 	background-color: #fff;
 	color: #0079C2;
@@ -582,10 +601,11 @@ content: "\f055";
 	padding-left: 40px;
 	display: block;
 }
-#accordion .card-header .btn:hover, #accordion .card-header .btn:focus {
+#accordion .card-header .btn:hover, #accordion .card-header .btn:focus,
+[id^="accordion_"] .card-header .btn:hover, [id^="accordion_"] .card-header .btn:focus {
 	background-color: #0079C2;
 	color: #fff;
-	background-image: url('client/img/icon_minus.svg');
+	background-image: url('/_resources/images/icon_minus.svg');
 	background-repeat: no-repeat;
 	background-position: 1% center;
 	background-size: 25px 25px;
@@ -1808,7 +1828,7 @@ a > .fa-ml {
 }
 .date {margin-bottom:0;}
 .press .date {
-	color: #777;
+	color: #595959;
 	font-size: 0.85em;
 	font-weight: 300;
 	margin: 0.3em 0 1.5em 0;
@@ -2274,7 +2294,7 @@ ul.dropdown-menu {
 header .logo {
 	background: url('client/img/nrel-logo-web.svg') no-repeat center;
 	height: 75px;
-	background-size: 160px;
+	background-size: 190px;
 	margin: 0 0 10px 0;
 }
 .program-header {
@@ -2291,7 +2311,7 @@ header.notopnav {border-bottom: 1px solid #d1d5d8; margin:0 0 1.5em 0;}
 @media only screen and (min-width : 480px) {
 	header .logo {
 		height: 85px;
-		background-size: 181px;
+		background-size: 214px;
 		margin: 0 0 10px 0;
 	}
 }
@@ -2299,7 +2319,7 @@ header.notopnav {border-bottom: 1px solid #d1d5d8; margin:0 0 1.5em 0;}
 	header .logo {
 		background: url('client/img/nrel-logo-web.svg') no-repeat left;
 		height:130px;
-		background-size: 277px;
+		background-size: 328px;
 	}
 	.program-header .container {
 		padding-right: 15px;
