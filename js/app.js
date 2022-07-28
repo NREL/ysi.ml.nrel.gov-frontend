@@ -7,10 +7,12 @@ const routes = [
   { path: '/result/:smiles', component: result, props: true, name: 'result' },
   { path: '/frag/:frag_str', component: frag, props: true, name: 'frag' }
 ];
+
 // Router
 const router = new VueRouter({
   routes // short for `routes: routes`
 });
+
 // Vue
 const app = new Vue({
   router
