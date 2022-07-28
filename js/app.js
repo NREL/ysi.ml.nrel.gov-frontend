@@ -1,5 +1,5 @@
 // Vue app
-const api_server = "http://localhost:8889";
+const api_server = "http://api.ml.nrel.gov";
 
 // Components loaded in prior scripts
 const routes = [

@@ -89,7 +89,7 @@ const result = Vue.component('result', {
         if (err.response) {
           this.api_error = err.response.data['detail'];
         } else {
-          this.api_error = "Unable to contact API server at " + api_server;
+          this.api_error = "Unable to contact API server";
         }
       });
     }
